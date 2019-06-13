@@ -1,0 +1,44 @@
+{
+  "name": "react-nhathung",
+  "version": "1.0.9",
+  "description": "Components for reactjs",
+  "main": "dist/react-nhathung.min.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:commonjs": "babel src/dist --out-dir lib",
+    "build:umd": "cross-env FILE_NAME=react-nhathung webpack",
+    "build:umd:min": "cross-env NODE_ENV=production npm run build:umd",
+    "clean": "rimraf lib dist",
+    "build:package": "npm run clean && npm run build:commonjs && npm run build:umd && npm run build:umd:min"
+  },
+  "author": "LE XUAN NHAT HUNG <nhathung0912200@gmail.com> (phongvanit.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.1",
+    "gulp-sync": "^0.1.4",
+    "less-plugin-autoprefix": "^2.0.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-scripts": "^3.0.1",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.4"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

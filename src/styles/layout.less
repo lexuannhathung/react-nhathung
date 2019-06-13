@@ -1,0 +1,102 @@
+/*---START rnh DIALOG ---*/
+.rnh-dialog-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .rnh-dialog-mask {
+        background-color: #000;
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 9999;
+    }
+
+    .rnh-dialog-content {
+        position: static;
+        border-radius: 5px;
+        min-width: 300px;
+        width: auto;
+        z-index: 10000;
+
+        .rnh-dialog-title {
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ce083b;
+            background-color: #fff;
+            padding: 20px;
+            position: relative;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            .close-button {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                color: #80868b;
+                cursor: pointer;
+            }
+        }
+
+        .rnh-dialog-main {
+            background-color: #fff;
+            padding: 20px;
+            position: relative;
+            border-top: solid 1px #e5e4e4;
+        }
+
+        .rnh-dialog-footer {
+            background-color: #fff;
+            padding: 20px;
+            position: relative;
+            border-top: solid 1px #e5e4e4;
+            text-align: right;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            button {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.rnh-dialog-disable-scroll {
+    @PaddingRight: 17px;
+
+    overflow: hidden;
+
+    @media all and (min-width: 992px) {
+        padding-right: @PaddingRight;
+
+        #header {
+            .pc-nav {
+                width: calc(100% + @PaddingRight);
+                padding-right: @PaddingRight;
+            }
+
+            .navbar {
+                position: static;
+            }
+        }
+
+        footer {
+            width: calc(100% + @PaddingRight);
+            padding-right: @PaddingRight;
+        }
+    }
+}
+/*---END rnh DIALOG ---*/
