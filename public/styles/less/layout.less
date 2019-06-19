@@ -1,0 +1,199 @@
+body {
+    width: 100%;
+    -ms-overflow-style: scrollbar; // to behave same as modern browsers such as chrome, Firefox, ...
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*--- START Loading ---*/
+@LoadingColor: #ef1341;
+.loading {
+    display: none;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    padding-top: 40vh;
+    z-index: 10000;
+
+    .loading-container {
+        width: 85px;
+        padding: 10px;
+        border-radius: 5px;
+        position: fixed;
+        top: calc(50vh - 85px);
+        left: calc(50vw - 43px);
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 46px;
+            height: 46px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 5px solid @LoadingColor;
+            border-color: @LoadingColor transparent @LoadingColor transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.loading-mask {
+    display: none;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.0);
+}
+/*--- END Loading ---*/
+
+/*---START Hide x in input of IE */
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+/*---END Hide x in input of IE */
+/*START Hide view password in input type=password in IE*/
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    display: none;
+}
+/*END Hide view password in input type=password in IE*/
+
+/*---START Menu in header ---*/
+.pc-nav .container-fluid > ul > li {
+    cursor: pointer;
+}
+/*---END Menu in header ---*/
+
+/*---START setup automation show ---*/
+.fade-scale {
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+.fade-scale.in {
+    opacity: 1;
+    transform: scale(1);
+}
+/*---END setup automation show ---*/
+
+/*---START not found page ---*/
+#not-found-page {
+    text-align: center;
+
+    .background-image {
+        width: 35%;
+    }
+}
+/*---END not found page ---*/
+
+/*---START message box ---*/
+.message-box {
+    .swal2-popup {
+        display: flex;
+        z-index: 9999;
+        width: 512px;
+        font-size: 16px;
+        max-width: 95%;
+
+        .swal2-header {
+            .swal2-icon {
+                display: flex;
+            }
+
+            .swal2-error {
+                display: flex;
+            }
+
+            .swal2-success {
+                display: flex;
+
+                .swal2-success-circular-line-left {
+                    background-color: rgb(255, 255, 255);
+                }
+
+                .swal2-success-fix {
+                    background-color: rgb(255, 255, 255);
+                }
+
+                .swal2-success-circular-line-right {
+                    background-color: rgb(255, 255, 255);
+                }
+            }
+
+            .swal2-warning {
+                display: flex;
+            }
+
+            .swal2-info {
+                display: flex;
+            }
+        }
+
+        .swal2-content {
+            .swal2-message {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .swal2-actions {
+            display: flex;
+
+            .swal2-styled {
+                font-size: 16px;
+                display: inline-block;
+                font-weight: 500;
+            }
+
+            .swal2-cancel {
+                background-color: rgb(221, 51, 51);
+            }
+        }
+    }
+}
+/*---END message box ---*/
+/*---START error mesage ---*/
+.error-msg {
+    //display: none;
+    //margin-top: -30px;
+    text-align: left;
+    margin-bottom: 30px;
+    color: #ff0019;
+}
+/*---END error mesage ---*/

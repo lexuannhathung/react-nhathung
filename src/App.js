@@ -1,5 +1,6 @@
 import React from 'react';
-import Dialog from './components/react-nhathung-dialogs/react-nhathung-dialog';
+import Header from './examples/pages/headers/header';
+import Sidebar from './examples/pages/sidebars/sidebar';
 
 class App extends React.Component {
     constructor() {
@@ -11,11 +12,14 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="App" >
-                kkkkkkkkkkkk
-                <Dialog open={this.state.open}>
-                    hello
-                </Dialog>
+            <div className="main" >
+                <Header />
+                <div className="container">
+                    <Sidebar />
+                    <div className="content">
+
+                    </div>
+                </div>
             </div>
         );
     }

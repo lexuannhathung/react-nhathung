@@ -10,10 +10,17 @@ gulp.task('less', function() {
        }))
         .pipe(gulp.dest('./src/styles'));
 });
+gulp.task('less-examples', function() {
+    return gulp.src('./public/styles/style.less').pipe(less({
+           plugins: [autoprefix]
+       }))
+        .pipe(gulp.dest('./public/styles'));
+});
 gulp.task('watch', gulpsync.sync([
-    'less'
+    'less', 'less-examples'
 ]), function () {
     gulp.watch(['./src/styles/*.less'], ['less']);
+    gulp.watch(['./public/styles/*.less'], ['less']);
 });
 
 gulp.task('default', ['watch']);
