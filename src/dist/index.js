@@ -1,2 +1,2 @@
-﻿import Dialog from '../components/react-nhathung-dialogs/react-nhathung-dialog';
-export { Dialog };
+﻿import ZorbaDialog from '../components/react-zorba-dialogs/react-zorba-dialog';
+export { ZorbaDialog };

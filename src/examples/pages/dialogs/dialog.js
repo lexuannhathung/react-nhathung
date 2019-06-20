@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-class HeaderConnected extends React.Component {
+class DialogConnected extends React.Component {
 
     constructor(props){
         super(props);
@@ -31,12 +31,12 @@ class HeaderConnected extends React.Component {
 
     render() {
         return (
-            <div id="header">
-                React Zorba v1.0.0
+            <div id="component-dialog">
+                Component Dialog
             </div>
         );
     }
 }
 
-const Header = connect(mapStateToProps, mapDispatchToProps)(HeaderConnected);
-export default withRouter(Header);
+const Dialog = connect(mapStateToProps, mapDispatchToProps)(DialogConnected);
+export default withRouter(Dialog);
