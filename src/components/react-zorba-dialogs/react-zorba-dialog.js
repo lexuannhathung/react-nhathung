@@ -1,4 +1,4 @@
-﻿import '../../styles/react-nhathung.css';
+﻿import '../../styles/react-zorba.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Common from '../../scripts/apps/common';
@@ -10,15 +10,15 @@ const GetCreatePortal = () =>
         ? ReactDOM.createPortal
         : ReactDOM.unstable_renderSubtreeIntoContainer;
 
-class Dialog extends React.Component {
+class ZorbaDialog extends React.Component {
 
     constructor(props) {
         super(props);
         this.class_name = new function () {
-            this.container = "rnh-dialog-container";
-            this.identifier = "rnh-dialog-identifier-" + Common.GetRandomInt(99999);
-            this.disable_scroll = "rnh-dialog-disable-scroll";
-            this.mask = "rnh-dialog-mask";
+            this.container = "rzorba-dialog-container";
+            this.identifier = "rzorba-dialog-identifier-" + Common.GetRandomInt(99999);
+            this.disable_scroll = "rzorba-dialog-disable-scroll";
+            this.mask = "rzorba-dialog-mask";
         }
         this.element = undefined;
         this.current_open = this.props.open;
@@ -83,4 +83,4 @@ class Dialog extends React.Component {
     }
 }
 
-export default Dialog;
+export default ZorbaDialog;
