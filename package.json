@@ -24,7 +24,7 @@
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "css-loader": "^3.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-less": "^4.0.1",
     "gulp-sync": "^0.1.4",
     "less-plugin-autoprefix": "^2.0.0",
